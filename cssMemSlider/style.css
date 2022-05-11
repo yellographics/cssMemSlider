@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+.slider-container {
+    border: 1px solid black;
+    width: 50%;
+    height: 80vh;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 'slider slider'
+                         'description navigation';
+}
+
+.slider-container__slides { 
+    position: relative;   
+    grid-area: slider;
+    width: 100%;    
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%;
+    transition: all 0.15s ease;  
+    background-color: black;  
+}
+
+
+#slide1 {
+    background-image: url(assets/images/mem1.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#slide2 {
+    background-image: url(assets/images/mem2.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#slide3 {
+    background-image: url(assets/images/mem3.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#slide4 {
+    background-image: url(assets/images/mem4.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#slide-one:checked ~ .slider-container__slides #slide1 {
+    margin-left: 0%;
+}
+
+#slide-one:checked ~ .slider-container__descriptions #desc1 {
+    margin-left: 0%;
+}
+
+#slide-two:checked ~ .slider-container__slides #slide2 {
+    margin-left: -100%;
+}
+
+#slide-two:checked ~ .slider-container__descriptions #desc2 {
+    margin-left: -100%;
+}
+
+#slide-three:checked ~ .slider-container__slides #slide3 {
+    margin-left: -200%;
+}
+
+#slide-three:checked ~ .slider-container__descriptions #desc3 {
+    margin-left: -200%;
+}
+
+#slide-four:checked ~ .slider-container__slides #slide4 {
+    margin-left: -300%;
+}
+
+#slide-four:checked ~ .slider-container__descriptions #desc4 {
+    margin-left: -300%;
+}
+
+
+.slider-container__nav {
+    grid-area: navigation;
+    display: flex;
+}
+
+.slider-container__descriptions {
+    grid-area: description;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.slider-container__descriptions p {
+    min-width: 100%;
+    background-color: white;
+    transition: all 0.15s ease; 
+}
+
