@@ -5,25 +5,28 @@
 body {
     background-color: #f5f5f5;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
 }
 
 h1 {
     text-align: center;
+    margin-top: 1rem;
+
 }
 
 input {
-    display: none;
+    visibility: hidden;
 }
 
 .slider-container { 
     background-color: black;  
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border: 20px solid black; 
-    border-radius: 20px;
+    border: 1rem solid black; 
+    border-radius: 1rem;
     overflow: hidden;
     width: 50%;
     height: 80vh;
-    margin: 50px auto;
+    margin: 2.5rem auto;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 80% 20%;
@@ -127,14 +130,14 @@ input {
     grid-area: navigation;
     display: flex;
     background-color: black;
-    gap: 5px;
-    padding-top: 25px;
+    gap: 0.05rem;
+    padding-top: 2.5rem;
 }
 
 .slider-container__nav label {
     background-color: black;
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -142,23 +145,23 @@ input {
 }
 
 .slider-container__nav label:hover span {
-    border: 3px solid rgb(255, 219, 219);
+    border: 0.3rem solid rgb(255, 219, 219);
 }
 
 .slider-container__nav label:active span {
-    border: 6px solid rgb(255, 219, 219);
+    border: 0.6rem solid rgb(255, 219, 219);
 }
 
 .slider-container__nav label span {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 1.1rem;
+    height: 1.1rem;
     border-radius: 50%;
-    border: 3px solid rosybrown;
+    border: 0.3rem solid rosybrown;
 }
 
 .slider-container__descriptions {
-    padding-top: 20px;
+    padding-top: 1rem;
     grid-area: description;
     display: flex;
     overflow-x: hidden;
@@ -170,7 +173,8 @@ input {
     color: aliceblue;  
     background-color: black;  
     transition: all 0.15s ease;
-    padding-left: 30px;
+    padding-left: 3rem;
+    font-size: 1.2rem;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -185,11 +189,17 @@ input {
 
     .slider-container__nav {
         margin: 0 auto;
+        padding-top: 0.5rem;        
+    }
+
+    .slider-container__descriptions {
+        padding-top: 0.5rem;
     }
 
     .slider-container__descriptions p {
         text-align: center;
-        padding-left: 0;
+        padding-left: 0;  
+        font-size: 0.7rem;      
     }
 }
 
