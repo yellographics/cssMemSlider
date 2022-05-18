@@ -33,8 +33,7 @@ input {
                          'description navigation';
 }
 
-.slider-container__slides { 
-    position: relative;   
+.slider-container__slides {      
     grid-area: slider;
     width: 100%;    
     display: flex;
